@@ -9,13 +9,13 @@ export function Results() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
           <SectionHeader
-            eyebrow="Resultados"
-            title="Resultados discretos, percebidos nos detalhes."
-            text="O objetivo não é mudar a sua expressão, mas valorizar o que já existe com planejamento e proporção."
+            eyebrow="Planejamento visual"
+            title="Discrição é parte do resultado."
+            text="O objetivo não é mudar a sua expressão, mas valorizar o que já existe com leitura facial, proporção e limite clínico."
           />
           <p className="text-sm leading-7 text-ink/58 lg:text-right">
-            Resultados variam conforme avaliação individual, anatomia, indicação
-            e resposta de cada paciente.
+            Imagens ilustrativas. Resultados reais variam conforme avaliação,
+            anatomia, indicação e resposta de cada paciente.
           </p>
         </div>
         <div className="mt-8 flex snap-x gap-4 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:grid lg:grid-cols-3 lg:overflow-visible">
@@ -39,6 +39,9 @@ export function Results() {
                 </div>
                 <div className="absolute right-4 top-4 rounded-full bg-white/78 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-ink/54">
                   Depois
+                </div>
+                <div className="absolute left-4 top-12 rounded-full bg-ink/60 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/78 backdrop-blur">
+                  Ilustrativo
                 </div>
                 <div className="absolute inset-x-5 bottom-5 border-t border-champagne/40 pt-4">
                   <p className="font-display text-3xl text-white drop-shadow">

@@ -53,6 +53,13 @@ export const treatments = [
   }
 ];
 
+export const proofPoints = [
+  "Cirurgião-dentista",
+  "CRO/RS 31162",
+  "Mestre em Odontologia pela PUCRS",
+  "Fellow em Harmonização Orofacial"
+];
+
 export const authorityPoints = [
   "Cirurgião-dentista — CRO/RS 31162",
   "Mestre em Odontologia — PUCRS",
@@ -103,19 +110,16 @@ export const processSteps = [
 
 export const trustNotes = [
   {
-    quote:
-      "Me senti segura desde a avaliação. O Dr. João explicou tudo com calma e respeitou exatamente o que eu buscava.",
-    name: "Paciente de harmonização orofacial"
+    quote: "Avaliação antes de qualquer indicação",
+    name: "O tratamento começa pela leitura do rosto, objetivos e histórico de saúde."
   },
   {
-    quote:
-      "Gostei da naturalidade do resultado. Ficou leve, sem mudar minha expressão.",
-    name: "Paciente de Botox"
+    quote: "Naturalidade também é limite",
+    name: "Nem todo procedimento faz sentido para todo rosto. O plano respeita proporção e expressão."
   },
   {
-    quote:
-      "Além do procedimento, recebi orientações claras sobre os cuidados e o acompanhamento.",
-    name: "Paciente de estética facial"
+    quote: "Acompanhamento com clareza",
+    name: "Orientações objetivas antes e depois do procedimento, com retorno quando indicado."
   }
 ];
 

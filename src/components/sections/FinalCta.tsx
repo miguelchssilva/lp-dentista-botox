@@ -7,10 +7,10 @@ export function FinalCta() {
     <MotionSection className="bg-deep py-16 text-white sm:py-20">
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <p className="text-xs font-bold uppercase tracking-[0.22em] text-champagne">
-          Avaliação facial
+          Próximo passo
         </p>
         <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">
-          Sua avaliação é o primeiro passo para um resultado mais natural.
+          Agende uma avaliação para entender o que faz sentido para o seu rosto.
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/72 sm:text-lg">
           Converse pelo WhatsApp e entenda quais tratamentos fazem sentido para

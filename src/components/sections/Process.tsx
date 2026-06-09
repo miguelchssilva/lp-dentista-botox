@@ -7,8 +7,8 @@ export function Process() {
     <MotionSection id="processo" className="bg-porcelain py-14 sm:py-20">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="Processo"
-          title="Uma experiência conduzida com clareza do início ao acompanhamento."
+          eyebrow="Consulta"
+          title="Uma experiência conduzida com clareza."
           text="Você entende o que será feito, por que está sendo indicado e quais cuidados fazem parte do processo."
         />
         <div className="mt-9 space-y-0 border-l border-deep/12 pl-5">
