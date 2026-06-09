@@ -6,8 +6,19 @@ import { proofPoints, site } from "@/lib/site";
 export function Hero() {
   return (
     <section className="relative isolate min-h-screen overflow-hidden bg-deep text-white">
-      <div className="grid min-h-screen lg:grid-cols-2">
-        <div className="relative z-10 flex min-h-screen items-center bg-deep px-5 pb-12 pt-24 sm:px-8 lg:px-[clamp(3rem,6vw,7rem)] lg:pb-10 lg:pt-24">
+      <Image
+        src={site.heroImage}
+        alt="Imagem ilustrativa de profissional em clínica estética premium"
+        fill
+        priority
+        sizes="100vw"
+        className="absolute inset-0 -z-20 object-cover object-[72%_center]"
+      />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(6,41,47,0.94)_0%,rgba(6,41,47,0.82)_34%,rgba(6,41,47,0.42)_58%,rgba(6,41,47,0.18)_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0.28))]" />
+
+      <div className="relative min-h-screen">
+        <div className="flex min-h-screen items-center px-5 pb-12 pt-24 sm:px-8 lg:px-[clamp(3rem,6vw,7rem)] lg:pb-10 lg:pt-24">
           <div className="w-full max-w-[680px]">
             <p className="inline-flex rounded-full border border-white/75 bg-white/8 px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white">
               Especialista em estética facial
@@ -46,29 +57,17 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative min-h-[560px] overflow-hidden lg:min-h-screen">
-          <Image
-            src={site.heroImage}
-            alt="Imagem ilustrativa de profissional em clínica estética premium"
-            fill
-            priority
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover object-[60%_center]"
-          />
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.25))]" />
-          <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-deep/42 to-transparent" />
-          <div className="absolute bottom-8 left-6 right-6 max-w-[440px] rounded-[24px] border border-white/32 bg-white/18 p-6 text-white shadow-[0_24px_90px_rgba(0,0,0,0.20)] backdrop-blur-[20px] lg:bottom-10 lg:left-10 lg:right-auto">
-            <p className="text-xs font-bold uppercase tracking-[0.24em] text-champagne">
-              {site.cro}
-            </p>
-            <p className="mt-3 font-display text-4xl leading-tight text-white">
-              Dr. João Henrique Nagildo
-            </p>
-            <p className="mt-4 text-sm font-medium leading-7 text-white/84">
-              Planejamento facial individualizado, com foco em segurança,
-              proporção e resultado natural.
-            </p>
-          </div>
+        <div className="absolute bottom-8 left-6 right-6 max-w-[440px] rounded-[24px] border border-white/32 bg-white/18 p-6 text-white shadow-[0_24px_90px_rgba(0,0,0,0.20)] backdrop-blur-[20px] lg:bottom-10 lg:left-[52%] lg:right-auto">
+          <p className="text-xs font-bold uppercase tracking-[0.24em] text-champagne">
+            {site.cro}
+          </p>
+          <p className="mt-3 font-display text-4xl leading-tight text-white">
+            Dr. João Henrique Nagildo
+          </p>
+          <p className="mt-4 text-sm font-medium leading-7 text-white/84">
+            Planejamento facial individualizado, com foco em segurança,
+            proporção e resultado natural.
+          </p>
         </div>
       </div>
     </section>
