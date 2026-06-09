@@ -1,15 +1,14 @@
 import { Authority } from "@/components/sections/Authority";
-import { ClinicalTrust } from "@/components/sections/ClinicalTrust";
-import { FaqSheet } from "@/components/sections/FaqSheet";
-import { FinalCta } from "@/components/sections/FinalCta";
+import { ContactForm } from "@/components/sections/ContactForm";
+import { Differentials } from "@/components/sections/Differentials";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { FloatingWhatsApp } from "@/components/sections/FloatingWhatsApp";
 import { Footer } from "@/components/sections/Footer";
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
-import { MobileWhatsAppBar } from "@/components/sections/MobileWhatsAppBar";
-import { Process } from "@/components/sections/Process";
 import { Results } from "@/components/sections/Results";
 import { Services } from "@/components/sections/Services";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { schema } from "@/lib/site";
 
 export default function Home() {
@@ -23,16 +22,15 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
-        <Authority />
         <Results />
-        <Process />
-        <ClinicalTrust />
-        <FinalCta />
+        <Authority />
+        <Differentials />
+        <Testimonials />
+        <ContactForm />
+        <FaqSection />
       </main>
       <Footer />
-      <FaqSheet enableGlobalTrigger triggerClassName="hidden" />
       <FloatingWhatsApp />
-      <MobileWhatsAppBar />
     </>
   );
 }

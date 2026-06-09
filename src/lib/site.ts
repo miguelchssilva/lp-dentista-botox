@@ -1,14 +1,16 @@
 export const site = {
   name: "Dr. João Henrique Nagildo",
+  shortName: "Dr. João Nagildo",
   cro: "CRO/RS 31162",
   title:
-    "Botox e Harmonização Orofacial em São Leopoldo | Dr. João Henrique Nagildo",
+    "Harmonização Orofacial e Botox em São Leopoldo | Dr. João Henrique Nagildo",
   description:
-    "Estética facial com planejamento individualizado, naturalidade e segurança clínica. Agende sua avaliação com o Dr. João Henrique Nagildo.",
+    "Harmonização orofacial, Botox, peeling químico e odontologia estética com planejamento individualizado, segurança clínica e naturalidade.",
   url: "https://drjoaonagildo.com.br",
   city: "São Leopoldo",
   region: "RS",
-  instagramUrl: "https://www.instagram.com/drjoaonagildo",
+  instagramHandle: "@dentistajoaonagildo",
+  instagramUrl: "https://www.instagram.com/dentistajoaonagildo",
   whatsappNumber:
     process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") ||
     "555194395273",
@@ -17,74 +19,84 @@ export const site = {
   heroImage: "/fotoperfil.jpeg"
 };
 
-export const getWhatsappUrl = () =>
-  `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
-    site.whatsappMessage
-  )}`;
+export const getWhatsappUrl = (message = site.whatsappMessage) =>
+  `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(message)}`;
 
 export const treatments = [
   {
-    title: "Botox",
-    summary:
-      "Suavização de linhas de expressão com foco em leveza, equilíbrio e preservação da naturalidade.",
-    detail:
-      "Indicado após avaliação da musculatura facial, da expressão e dos objetivos de cada paciente."
-  },
-  {
     title: "Harmonização Orofacial",
     summary:
-      "Planejamento facial personalizado para melhorar proporções, contornos e harmonia do rosto.",
-    detail:
-      "Cada indicação parte da leitura anatômica do rosto, sem padronização e sem exageros."
+      "Planejamento facial para equilibrar contornos, proporções e expressão com naturalidade.",
+    icon: "spark"
+  },
+  {
+    title: "Botox",
+    summary:
+      "Suavização de linhas de expressão com foco em leveza e preservação dos movimentos.",
+    icon: "needle"
   },
   {
     title: "Peeling Químico",
     summary:
-      "Renovação da pele para melhorar textura, luminosidade e uniformidade.",
-    detail:
-      "A escolha do protocolo considera tipo de pele, rotina, sensibilidade e objetivo clínico."
+      "Renovação da pele para melhorar textura, luminosidade e uniformidade com indicação criteriosa.",
+    icon: "drop"
   },
   {
     title: "Odontologia Estética",
     summary:
-      "Cuidados estéticos para integrar sorriso, face e expressão de forma mais harmônica.",
-    detail:
-      "O sorriso é avaliado dentro do conjunto facial para preservar proporção, função e naturalidade."
+      "Cuidados estéticos para integrar sorriso, face e expressão de forma harmônica.",
+    icon: "smile"
+  },
+  {
+    title: "Clareamento Dental",
+    summary:
+      "Protocolos seguros para melhorar a luminosidade do sorriso com critério clínico.",
+    icon: "shine"
+  },
+  {
+    title: "Lentes de Contato Dental",
+    summary:
+      "Planejamento estético para forma, cor e proporção do sorriso de maneira natural.",
+    icon: "diamond"
   }
 ];
 
 export const proofPoints = [
-  "Cirurgião-dentista",
-  "CRO/RS 31162",
-  "Mestre em Odontologia pela PUCRS",
+  site.cro,
+  "Especialista e Mestre pela PUCRS",
   "Fellow em Harmonização Orofacial"
 ];
 
 export const authorityPoints = [
-  "Cirurgião-dentista — CRO/RS 31162",
-  "Mestre em Odontologia — PUCRS",
-  "Especialista em Odontologia",
+  "Especialista e Mestre em Odontologia pela PUCRS",
   "Fellow em Harmonização Orofacial",
-  "Atuação em estética facial e odontologia estética"
+  "Atendimento estritamente individualizado",
+  "Ética profissional e busca contínua por excelência"
 ];
 
 export const results = [
   {
-    title: "Botox",
+    title: "Botox Preventivo",
     label: "Expressão preservada",
-    note: "Suavização de linhas preservando movimento, leveza e leitura natural da face.",
+    note: "Suavização de linhas com planejamento para manter leveza e naturalidade.",
     image: "/resultado-botox.png"
   },
   {
     title: "Peeling Químico",
     label: "Textura e luminosidade",
-    note: "Planejamento para uma pele com aspecto mais uniforme, viçoso e bem cuidado.",
+    note: "Indicação para melhorar viço, uniformidade e qualidade visual da pele.",
     image: "/resultado-peeling.png"
   },
   {
-    title: "Harmonização",
+    title: "Harmonização Facial",
     label: "Equilíbrio facial",
-    note: "Proporção e contorno avaliados com critério para valorizar o que já existe.",
+    note: "Proporções, contornos e expressão avaliados com critério individual.",
+    image: "/resultado-harmonizacao.png"
+  },
+  {
+    title: "Odontologia Estética",
+    label: "Sorriso e face",
+    note: "Integração entre estética do sorriso, leitura facial e objetivos pessoais.",
     image: "/resultado-harmonizacao.png"
   }
 ];
@@ -96,63 +108,91 @@ export const processSteps = [
   },
   {
     title: "Planejamento",
-    text: "Indicação do que faz sentido para o seu caso, com limites claros e sem exageros."
+    text: "Indicação do que faz sentido para o seu caso, com limites claros."
   },
   {
     title: "Procedimento",
-    text: "Execução técnica e cuidadosa, com foco em precisão, conforto e segurança."
+    text: "Execução técnica, cuidadosa e segura."
   },
   {
     title: "Acompanhamento",
-    text: "Orientações pós-procedimento e retorno quando indicado para acompanhar a evolução."
+    text: "Orientações pós-procedimento e retorno quando indicado."
   }
 ];
 
-export const trustNotes = [
+export const differentiators = [
   {
-    quote: "Avaliação antes de qualquer indicação",
-    name: "O tratamento começa pela leitura do rosto, objetivos e histórico de saúde."
+    title: "Resultados naturais",
+    text: "Foco em realçar sua beleza sem artificializar a expressão."
   },
   {
-    quote: "Naturalidade também é limite",
-    name: "Nem todo procedimento faz sentido para todo rosto. O plano respeita proporção e expressão."
+    title: "Planejamento individualizado",
+    text: "Cada decisão considera rosto, rotina, objetivos e histórico clínico."
   },
   {
-    quote: "Acompanhamento com clareza",
-    name: "Orientações objetivas antes e depois do procedimento, com retorno quando indicado."
+    title: "Formação de excelência",
+    text: "Especialização, mestrado e atualização contínua aplicados na prática."
+  },
+  {
+    title: "Atendimento humanizado",
+    text: "Consulta com escuta, explicação objetiva e acolhimento."
+  },
+  {
+    title: "Segurança clínica",
+    text: "Indicação responsável, técnica precisa e orientação completa."
+  },
+  {
+    title: "Ambiente premium",
+    text: "Atendimento com hora marcada, privacidade e atenção aos detalhes."
+  }
+];
+
+export const testimonials = [
+  {
+    quote:
+      "Sempre tive receio de fazer Botox e ficar artificial. O Dr. João explicou tudo com calma e o resultado ficou muito natural.",
+    name: "Paciente de Botox",
+    initials: "C"
+  },
+  {
+    quote:
+      "Gostei da clareza na avaliação. Ele ouviu o que eu queria e indicou somente o que fazia sentido para mim.",
+    name: "Paciente de harmonização",
+    initials: "R"
+  },
+  {
+    quote:
+      "O atendimento passa segurança desde o primeiro contato. Tudo foi feito com cuidado, sem exageros.",
+    name: "Paciente de estética facial",
+    initials: "H"
   }
 ];
 
 export const faqs = [
   {
-    question: "Botox dói?",
+    question: "O Botox deixa o rosto artificial?",
     answer:
-      "A aplicação costuma ser rápida e bem tolerada. Durante a avaliação, o Dr. João explica como o procedimento é feito e quais cuidados são indicados."
+      "Quando bem planejado, o objetivo é suavizar linhas sem travar a expressão. A dose e os pontos são definidos após avaliação."
   },
   {
-    question: "Quanto tempo dura o Botox?",
+    question: "A harmonização orofacial dói?",
     answer:
-      "A duração pode variar conforme organismo, região tratada e planejamento realizado. Em geral, o efeito permanece por alguns meses."
+      "A sensibilidade varia conforme o procedimento e o paciente. Durante a avaliação, o Dr. João explica como cada etapa é conduzida e quais cuidados são indicados."
   },
   {
-    question: "O resultado fica artificial?",
+    question: "Quanto tempo duram os resultados?",
     answer:
-      "O planejamento é feito para preservar a naturalidade. A proposta é suavizar sinais e valorizar os traços, sem mudar sua expressão."
+      "A duração depende do tratamento, metabolismo, região tratada e resposta individual. Isso é alinhado antes do procedimento."
   },
   {
-    question: "Qual a diferença entre Botox e preenchimento?",
+    question: "Como funciona a avaliação inicial?",
     answer:
-      "O Botox atua principalmente na suavização de linhas de expressão. O preenchimento pode ser indicado para repor volume, melhorar contornos ou equilibrar proporções."
+      "A consulta inclui escuta dos objetivos, análise facial, histórico de saúde, explicação das possibilidades e definição de um plano individual."
   },
   {
-    question: "Quem pode fazer harmonização orofacial?",
+    question: "Quais formas de pagamento são aceitas?",
     answer:
-      "A indicação depende de avaliação individual, histórico de saúde, objetivos e análise facial."
-  },
-  {
-    question: "Quanto tempo leva a consulta?",
-    answer:
-      "O tempo pode variar conforme o caso, mas a avaliação é conduzida com calma para entender objetivos, explicar possibilidades e alinhar expectativas."
+      "As condições são informadas no atendimento pelo WhatsApp, de acordo com o procedimento indicado."
   }
 ];
 
@@ -163,6 +203,7 @@ export const schema = {
   description: site.description,
   url: site.url,
   image: `${site.url}${site.heroImage}`,
+  telephone: `+${site.whatsappNumber}`,
   address: {
     "@type": "PostalAddress",
     addressLocality: site.city,
@@ -172,6 +213,5 @@ export const schema = {
   areaServed: ["São Leopoldo", "Porto Alegre", "Vale dos Sinos"],
   medicalSpecialty: ["Odontologia Estética", "Harmonização Orofacial"],
   priceRange: "$$$",
-  sameAs: [site.instagramUrl],
-  telephone: `+${site.whatsappNumber}`
+  sameAs: [site.instagramUrl]
 };

@@ -6,7 +6,7 @@ import { getWhatsappUrl } from "@/lib/site";
 type WhatsAppButtonProps = {
   children?: string;
   className?: string;
-  variant?: "primary" | "outline" | "light";
+  variant?: "primary" | "outline" | "light" | "gold";
 };
 
 export function WhatsAppButton({
@@ -20,7 +20,8 @@ export function WhatsAppButton({
     primary: "bg-deep text-white shadow-cta hover:bg-petroleum",
     outline:
       "border border-petroleum/25 bg-white/82 text-ink hover:border-petroleum hover:bg-white",
-    light: "bg-white text-deep shadow-cta hover:bg-mist"
+    light: "bg-white text-deep shadow-cta hover:bg-mist",
+    gold: "bg-champagne text-white shadow-cta hover:bg-[#B69565]"
   }[variant];
 
   return (

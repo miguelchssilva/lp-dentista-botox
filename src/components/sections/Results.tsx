@@ -5,55 +5,39 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export function Results() {
   return (
-    <MotionSection id="resultados" className="bg-white py-14 sm:py-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
-          <SectionHeader
-            eyebrow="Planejamento visual"
-            title="Discrição é parte do resultado."
-            text="O objetivo não é mudar a sua expressão, mas valorizar o que já existe com leitura facial, proporção e limite clínico."
-          />
-          <p className="text-sm leading-7 text-ink/58 lg:text-right">
-            Imagens ilustrativas. Resultados reais variam conforme avaliação,
-            anatomia, indicação e resposta de cada paciente.
-          </p>
-        </div>
-        <div className="mt-8 flex snap-x gap-4 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:grid lg:grid-cols-3 lg:overflow-visible">
+    <MotionSection id="resultados" className="bg-deep py-16 text-white sm:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <SectionHeader
+          eyebrow="Portfólio"
+          title="Resultados que respeitam a individualidade."
+          text="Imagens ilustrativas para demonstrar direção estética. Resultados variam conforme avaliação, anatomia, indicação e resposta de cada paciente."
+          align="center"
+          tone="dark"
+        />
+        <div className="mt-10 flex snap-x gap-5 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:grid lg:grid-cols-4 lg:overflow-visible">
           {results.map((result) => (
             <article
-              key={result.label}
-              className="min-w-[82%] snap-center overflow-hidden rounded-[1.4rem] border border-deep/10 bg-porcelain sm:min-w-[360px] lg:min-w-0"
+              key={result.title}
+              className="min-w-[78%] snap-center overflow-hidden rounded-lg bg-white/8 ring-1 ring-white/10 sm:min-w-[340px] lg:min-w-0"
             >
-              <div className="relative grid aspect-[4/5] overflow-hidden bg-bone">
+              <div className="relative aspect-[3/4] overflow-hidden bg-petroleum">
                 <Image
                   src={result.image}
-                  alt={`${result.title} - imagem ilustrativa de antes e depois`}
+                  alt={`${result.title} - imagem ilustrativa`}
                   fill
-                  sizes="(min-width: 1024px) 31vw, 82vw"
+                  sizes="(min-width: 1024px) 25vw, 78vw"
                   className="object-cover"
                 />
-                <div className="absolute inset-y-0 left-1/2 w-px bg-white/80" />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/24 via-transparent to-transparent" />
-                <div className="absolute left-4 top-4 rounded-full bg-white/78 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-ink/54">
-                  Antes
-                </div>
-                <div className="absolute right-4 top-4 rounded-full bg-white/78 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-ink/54">
-                  Depois
-                </div>
-                <div className="absolute left-4 top-12 rounded-full bg-ink/60 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/78 backdrop-blur">
-                  Ilustrativo
-                </div>
-                <div className="absolute inset-x-5 bottom-5 border-t border-champagne/40 pt-4">
-                  <p className="font-display text-3xl text-white drop-shadow">
-                    {result.title}
-                  </p>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-deep/70 via-transparent to-transparent" />
+                <span className="absolute bottom-4 left-4 rounded-full bg-white px-3 py-1 text-xs font-semibold text-ink">
+                  {result.title}
+                </span>
               </div>
               <div className="p-5">
-                <h3 className="font-display text-2xl text-ink">
+                <h3 className="font-display text-2xl text-white">
                   {result.label}
                 </h3>
-                <p className="mt-2 text-sm leading-6 text-ink/58">
+                <p className="mt-2 text-sm leading-7 text-white/64">
                   {result.note}
                 </p>
               </div>
