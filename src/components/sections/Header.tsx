@@ -19,7 +19,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-deep/8 bg-white/88 backdrop-blur-2xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-deep/[0.08] bg-white/[0.94] shadow-[0_1px_0_rgba(6,41,47,0.04)] backdrop-blur-2xl">
       <div className="mx-auto grid h-[72px] max-w-7xl grid-cols-[auto_auto] items-center justify-between px-5 sm:px-6 lg:grid-cols-[220px_1fr_220px] lg:px-8">
         <Link
           href="#"
@@ -35,7 +35,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center justify-center gap-9 text-[12px] font-semibold uppercase tracking-[0.08em] text-ink/62 lg:flex">
+        <nav className="hidden items-center justify-center gap-9 text-[12px] font-semibold uppercase tracking-[0.08em] text-ink/68 lg:flex">
           {navItems.map((item) => (
             <Link key={item.href} href={item.href} className="transition hover:text-ink">
               {item.label}
