@@ -6,6 +6,7 @@ dist/
 !.env.example
 npm-debug.log*
 next-dev*.log
+next-start*.log
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
