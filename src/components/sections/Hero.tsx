@@ -49,7 +49,7 @@ export function Hero() {
         <div className="relative min-h-[560px] overflow-hidden lg:min-h-screen">
           <Image
             src={site.heroImage}
-            alt="Dr. João Henrique Nagildo em atendimento clínico"
+            alt="Imagem ilustrativa de profissional em clínica estética premium"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"

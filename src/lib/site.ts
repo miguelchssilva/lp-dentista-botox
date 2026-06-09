@@ -16,7 +16,8 @@ export const site = {
     "555194395273",
   whatsappMessage:
     "Olá, Dr. João. Gostaria de agendar uma avaliação para tratamentos faciais.",
-  heroImage: "/fotoperfil.jpeg"
+  heroImage: "/hero-medico-ficticio.png",
+  profileImage: "/fotoperfil.jpeg"
 };
 
 export const getWhatsappUrl = (message = site.whatsappMessage) =>

@@ -11,7 +11,7 @@ export function Authority() {
         <div className="relative">
           <div className="relative mx-auto aspect-[4/5] w-full max-w-[560px] overflow-hidden rounded-[24px] bg-bone shadow-[0_28px_90px_rgba(14,37,43,0.14)]">
             <Image
-              src={site.heroImage}
+              src={site.profileImage}
               alt="Dr. João Henrique Nagildo"
               fill
               sizes="(min-width: 1024px) 44vw, 92vw"
