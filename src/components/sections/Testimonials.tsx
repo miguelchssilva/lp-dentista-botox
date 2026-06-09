@@ -5,34 +5,39 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export function Testimonials() {
   return (
-    <MotionSection id="depoimentos" className="bg-porcelain py-16 sm:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <MotionSection id="depoimentos" className="bg-porcelain py-20 sm:py-28 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Experiências"
           title="O que dizem os pacientes"
           text="Relatos sobre uma experiência conduzida com calma, clareza e cuidado."
           align="center"
         />
-        <div className="mt-10 grid gap-4 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {testimonials.map((item) => (
             <article
               key={item.name}
-              className="rounded-lg border border-deep/8 bg-white p-6 shadow-sm"
+              className="rounded-[22px] border border-deep/8 bg-white p-8 shadow-[0_18px_55px_rgba(14,37,43,0.06)]"
             >
               <div className="flex gap-1 text-champagne">
                 {Array.from({ length: 5 }).map((_, index) => (
                   <Star key={index} className="h-4 w-4 fill-current" />
                 ))}
               </div>
-              <p className="mt-5 text-sm italic leading-7 text-ink/72">
+              <p className="mt-7 min-h-[170px] text-[16px] italic leading-8 text-ink/72">
                 "{item.quote}"
               </p>
-              <div className="mt-6 flex items-center gap-3">
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-bone font-semibold text-petroleum">
+              <div className="mt-8 flex items-center gap-4 border-t border-deep/8 pt-6">
+                <span className="grid h-12 w-12 place-items-center rounded-full bg-deep font-semibold text-champagne">
                   {item.initials}
                 </span>
-                <span className="text-sm font-semibold text-ink">
-                  {item.name}
+                <span>
+                  <span className="block text-sm font-bold text-ink">
+                    {item.name}
+                  </span>
+                  <span className="mt-1 block text-xs font-semibold uppercase tracking-[0.14em] text-ink/42">
+                    {item.procedure}
+                  </span>
                 </span>
               </div>
             </article>

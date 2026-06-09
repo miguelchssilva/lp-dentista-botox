@@ -4,6 +4,7 @@ type SectionHeaderProps = {
   text?: string;
   align?: "left" | "center";
   tone?: "light" | "dark";
+  className?: string;
 };
 
 export function SectionHeader({
@@ -11,27 +12,32 @@ export function SectionHeader({
   title,
   text,
   align = "left",
-  tone = "light"
+  tone = "light",
+  className = ""
 }: SectionHeaderProps) {
   const titleColor = tone === "dark" ? "text-white" : "text-ink";
-  const textColor = tone === "dark" ? "text-white/68" : "text-ink/68";
+  const textColor = tone === "dark" ? "text-white/66" : "text-ink/62";
 
   return (
     <div
-      className={`mx-auto max-w-3xl ${
+      className={`mx-auto max-w-4xl ${
         align === "center" ? "text-center" : "text-left"
-      }`}
+      } ${className}`}
     >
       {eyebrow ? (
-        <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-champagne">
+        <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.28em] text-champagne">
           {eyebrow}
         </p>
       ) : null}
-      <h2 className={`font-display text-3xl leading-tight sm:text-4xl lg:text-5xl ${titleColor}`}>
+      <h2
+        className={`font-display text-4xl leading-[1.02] sm:text-5xl lg:text-[4.25rem] ${titleColor}`}
+      >
         {title}
       </h2>
       {text ? (
-        <p className={`mt-5 text-base leading-8 sm:text-lg ${textColor}`}>{text}</p>
+        <p className={`mx-auto mt-6 max-w-2xl text-base leading-8 sm:text-lg ${textColor}`}>
+          {text}
+        </p>
       ) : null}
     </div>
   );

@@ -152,18 +152,21 @@ export const testimonials = [
     quote:
       "Sempre tive receio de fazer Botox e ficar artificial. O Dr. João explicou tudo com calma e o resultado ficou muito natural.",
     name: "Paciente de Botox",
+    procedure: "Botox preventivo",
     initials: "C"
   },
   {
     quote:
       "Gostei da clareza na avaliação. Ele ouviu o que eu queria e indicou somente o que fazia sentido para mim.",
     name: "Paciente de harmonização",
+    procedure: "Harmonização orofacial",
     initials: "R"
   },
   {
     quote:
       "O atendimento passa segurança desde o primeiro contato. Tudo foi feito com cuidado, sem exageros.",
     name: "Paciente de estética facial",
+    procedure: "Estética facial",
     initials: "H"
   }
 ];

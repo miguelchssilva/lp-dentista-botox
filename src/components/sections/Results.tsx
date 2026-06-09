@@ -5,8 +5,8 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export function Results() {
   return (
-    <MotionSection id="resultados" className="bg-deep py-16 text-white sm:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <MotionSection id="resultados" className="bg-deep py-20 text-white sm:py-28 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Portfólio"
           title="Resultados que respeitam a individualidade."
@@ -14,30 +14,27 @@ export function Results() {
           align="center"
           tone="dark"
         />
-        <div className="mt-10 flex snap-x gap-5 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:grid lg:grid-cols-4 lg:overflow-visible">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {results.map((result) => (
-            <article
-              key={result.title}
-              className="min-w-[78%] snap-center overflow-hidden rounded-lg bg-white/8 ring-1 ring-white/10 sm:min-w-[340px] lg:min-w-0"
-            >
-              <div className="relative aspect-[3/4] overflow-hidden bg-petroleum">
+            <article key={result.title} className="group">
+              <div className="relative h-[390px] overflow-hidden rounded-[20px] bg-petroleum shadow-[0_24px_80px_rgba(0,0,0,0.18)] sm:h-[430px] lg:h-[460px]">
                 <Image
                   src={result.image}
                   alt={`${result.title} - imagem ilustrativa`}
                   fill
-                  sizes="(min-width: 1024px) 25vw, 78vw"
-                  className="object-cover"
+                  sizes="(min-width: 1024px) 24vw, (min-width: 640px) 48vw, 92vw"
+                  className="object-cover transition duration-500 group-hover:scale-[1.03]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-deep/70 via-transparent to-transparent" />
-                <span className="absolute bottom-4 left-4 rounded-full bg-white px-3 py-1 text-xs font-semibold text-ink">
+                <div className="absolute inset-0 bg-gradient-to-t from-deep/58 via-transparent to-transparent" />
+                <span className="absolute bottom-5 left-5 rounded-full bg-white px-4 py-2 text-xs font-bold text-ink shadow-sm">
                   {result.title}
                 </span>
               </div>
-              <div className="p-5">
+              <div className="px-1 pt-5">
                 <h3 className="font-display text-2xl text-white">
                   {result.label}
                 </h3>
-                <p className="mt-2 text-sm leading-7 text-white/64">
+                <p className="mt-2 text-sm leading-7 text-white/58">
                   {result.note}
                 </p>
               </div>
