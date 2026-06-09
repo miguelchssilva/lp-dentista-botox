@@ -19,25 +19,29 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-deep/[0.08] bg-white/[0.94] shadow-[0_1px_0_rgba(6,41,47,0.04)] backdrop-blur-2xl">
-      <div className="mx-auto grid h-[72px] max-w-7xl grid-cols-[auto_auto] items-center justify-between px-5 sm:px-6 lg:grid-cols-[220px_1fr_220px] lg:px-8">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-[rgba(255,255,255,0.14)] bg-[rgba(6,41,47,0.62)] backdrop-blur-xl">
+      <div className="mx-auto grid h-[72px] max-w-7xl grid-cols-[auto_auto] items-center justify-between px-5 sm:px-6 lg:grid-cols-[230px_1fr_230px] lg:px-8">
         <Link
           href="#"
           className="leading-none"
           aria-label="Ir para o início"
           onClick={() => setIsOpen(false)}
         >
-          <span className="font-display text-[22px] text-ink">
+          <span className="font-display text-[22px] text-white">
             <span className="italic text-champagne">Dr.</span> João Nagildo
           </span>
-          <span className="mt-1 block text-[10px] font-semibold uppercase tracking-[0.24em] text-ink/42">
+          <span className="mt-1 block text-[10px] font-semibold uppercase tracking-[0.24em] text-white/72">
             {site.cro}
           </span>
         </Link>
 
-        <nav className="hidden items-center justify-center gap-9 text-[12px] font-semibold uppercase tracking-[0.08em] text-ink/68 lg:flex">
+        <nav className="hidden items-center justify-center gap-9 text-[12px] font-semibold uppercase tracking-[0.08em] text-[rgba(255,255,255,0.92)] lg:flex">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="transition hover:text-ink">
+            <Link
+              key={item.href}
+              href={item.href}
+              className="transition hover:text-champagne"
+            >
               {item.label}
             </Link>
           ))}
@@ -50,7 +54,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setIsOpen((value) => !value)}
-            className="grid h-11 w-11 place-items-center rounded-full border border-deep/10 bg-white text-ink lg:hidden"
+            className="grid h-11 w-11 place-items-center rounded-full border border-white/25 bg-white/10 text-white lg:hidden"
             aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={isOpen}
           >
@@ -60,14 +64,14 @@ export function Header() {
       </div>
 
       {isOpen ? (
-        <div className="border-t border-deep/8 bg-white px-5 py-5 shadow-soft lg:hidden">
-          <nav className="mx-auto flex max-w-7xl flex-col gap-1 text-base font-medium text-ink">
+        <div className="border-t border-white/12 bg-deep/96 px-5 py-5 shadow-soft lg:hidden">
+          <nav className="mx-auto flex max-w-7xl flex-col gap-1 text-base font-medium text-white">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="rounded-2xl px-3 py-3 hover:bg-porcelain"
+                className="rounded-2xl px-3 py-3 hover:bg-white/8"
               >
                 {item.label}
               </Link>
