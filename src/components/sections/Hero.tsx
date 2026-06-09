@@ -57,18 +57,6 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-6 right-6 max-w-[440px] rounded-[24px] border border-white/32 bg-white/18 p-6 text-white shadow-[0_24px_90px_rgba(0,0,0,0.20)] backdrop-blur-[20px] lg:bottom-10 lg:left-[52%] lg:right-auto">
-          <p className="text-xs font-bold uppercase tracking-[0.24em] text-champagne">
-            {site.cro}
-          </p>
-          <p className="mt-3 font-display text-4xl leading-tight text-white">
-            Dr. João Henrique Nagildo
-          </p>
-          <p className="mt-4 text-sm font-medium leading-7 text-white/84">
-            Planejamento facial individualizado, com foco em segurança,
-            proporção e resultado natural.
-          </p>
-        </div>
       </div>
     </section>
   );
