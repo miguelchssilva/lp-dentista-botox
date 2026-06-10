@@ -14,9 +14,12 @@ export function Results() {
           align="center"
           tone="dark"
         />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4 lg:gap-5">
+        <div className="mt-10 flex snap-x gap-5 overflow-x-auto pb-3 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mt-14 lg:grid lg:grid-cols-4 lg:overflow-visible lg:pb-0">
           {results.map((result) => (
-            <article key={result.title} className="group">
+            <article
+              key={result.title}
+              className="group min-w-[82%] snap-center sm:min-w-[46%] lg:min-w-0"
+            >
               <div className="relative h-[340px] overflow-hidden rounded-[20px] bg-petroleum shadow-[0_24px_80px_rgba(0,0,0,0.18)] sm:h-[380px] lg:h-[460px]">
                 <Image
                   src={result.image}

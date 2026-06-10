@@ -13,11 +13,11 @@ export function Testimonials() {
           text="Relatos sobre uma experiência conduzida com calma, clareza e cuidado."
           align="center"
         />
-        <div className="mt-10 grid gap-5 lg:mt-14 lg:grid-cols-3 lg:gap-6">
+        <div className="mt-10 flex snap-x gap-5 overflow-x-auto pb-3 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mt-14 lg:grid lg:grid-cols-3 lg:overflow-visible lg:pb-0">
           {testimonials.map((item) => (
             <article
               key={item.name}
-              className="rounded-[22px] border border-deep/8 bg-white p-6 shadow-[0_18px_55px_rgba(14,37,43,0.06)] lg:p-8"
+              className="min-w-[82%] snap-center rounded-[22px] border border-deep/8 bg-white p-6 shadow-[0_18px_55px_rgba(14,37,43,0.06)] sm:min-w-[46%] lg:min-w-0 lg:p-8"
             >
               <div className="flex gap-1 text-champagne">
                 {Array.from({ length: 5 }).map((_, index) => (
