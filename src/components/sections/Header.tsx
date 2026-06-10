@@ -30,7 +30,7 @@ export function Header() {
           <span className="font-display text-[22px] text-white">
             <span className="italic text-champagne">Dr.</span> João Nagildo
           </span>
-          <span className="mt-1 block text-[10px] font-semibold uppercase tracking-[0.24em] text-white/72">
+          <span className="mt-1 block text-[10px] font-semibold uppercase tracking-[0.24em] text-white">
             {site.cro}
           </span>
         </Link>
