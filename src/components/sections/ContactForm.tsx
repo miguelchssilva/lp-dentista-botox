@@ -27,16 +27,16 @@ export function ContactForm() {
   };
 
   return (
-    <MotionSection id="agendamento" className="bg-deep py-20 sm:py-28 lg:py-32">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:px-8">
+    <MotionSection id="agendamento" className="bg-deep py-16 sm:py-20 lg:py-32">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-12 lg:px-8">
         <form
           onSubmit={handleSubmit}
-          className="rounded-[24px] bg-white p-7 shadow-[0_30px_100px_rgba(0,0,0,0.22)] sm:p-10 lg:p-12"
+          className="rounded-[24px] bg-white p-6 shadow-[0_30px_100px_rgba(0,0,0,0.22)] sm:p-8 lg:p-12"
         >
           <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-champagne">
             Dê o primeiro passo
           </p>
-          <h2 className="mt-4 font-display text-5xl leading-[1.04] text-ink sm:text-6xl">
+          <h2 className="mt-4 font-display text-4xl leading-[1.06] text-ink sm:text-5xl lg:text-6xl">
             Agende sua avaliação
           </h2>
           <p className="mt-5 max-w-lg text-[15px] leading-8 text-ink/62">
@@ -44,7 +44,7 @@ export function ContactForm() {
             A confirmação do horário é feita pelo contato direto.
           </p>
 
-          <div className="mt-9 space-y-5">
+          <div className="mt-7 space-y-4 lg:mt-9 lg:space-y-5">
             <label className="block text-sm font-semibold text-ink">
               Nome completo
               <input
@@ -94,10 +94,10 @@ export function ContactForm() {
           <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-champagne">
             Atendimento
           </p>
-          <h2 className="mt-4 max-w-2xl font-display text-5xl leading-[1.04] sm:text-6xl">
+          <h2 className="mt-4 max-w-2xl font-display text-4xl leading-[1.06] sm:text-5xl lg:text-6xl">
             Uma avaliação cuidadosa começa em uma conversa simples.
           </h2>
-          <div className="mt-10 grid gap-4 text-sm text-white/72 sm:grid-cols-2">
+          <div className="mt-8 grid gap-4 text-sm text-white/72 sm:grid-cols-2 lg:mt-10">
             <p className="flex gap-3 rounded-[18px] border border-white/10 bg-white/[0.05] p-5">
               <MapPin className="h-5 w-5 shrink-0 text-champagne" />
               Rio Grande do Sul, RS. Atendimento com hora marcada.
@@ -121,7 +121,7 @@ export function ContactForm() {
               title="Mapa de São Leopoldo, RS"
               src="https://www.google.com/maps?q=S%C3%A3o%20Leopoldo%20RS&output=embed"
               loading="lazy"
-              className="h-[300px] w-full border-0 grayscale-[20%]"
+              className="h-[240px] w-full border-0 grayscale-[20%] lg:h-[300px]"
             />
           </div>
           <p className="mt-5 text-sm leading-7 text-white/58">

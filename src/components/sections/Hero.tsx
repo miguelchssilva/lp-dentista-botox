@@ -23,12 +23,12 @@ export function Hero() {
             <p className="inline-flex rounded-full border border-white/75 bg-white/8 px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white">
               Especialista em estética facial
             </p>
-            <h1 className="mt-6 font-display text-[3.35rem] leading-[0.92] text-white sm:text-[5rem] lg:text-[3.75rem] xl:text-[4.05rem]">
+            <h1 className="mt-6 font-display text-[2.7rem] leading-[0.96] text-white sm:text-[3.15rem] lg:text-[3.75rem] lg:leading-[0.92] xl:text-[4.05rem]">
               Harmonia facial com{" "}
               <span className="italic text-champagne">naturalidade</span> e
               sofisticação.
             </h1>
-            <p className="mt-5 max-w-[560px] text-base font-medium leading-8 text-white/82 sm:text-lg">
+            <p className="mt-5 max-w-[560px] text-[15px] font-medium leading-7 text-white/82 sm:text-base lg:text-lg lg:leading-8">
               Botox, harmonização orofacial e peeling químico com planejamento
               individualizado para realçar sua beleza de forma elegante,
               equilibrada e segura.

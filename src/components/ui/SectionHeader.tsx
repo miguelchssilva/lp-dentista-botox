@@ -30,12 +30,12 @@ export function SectionHeader({
         </p>
       ) : null}
       <h2
-        className={`font-display text-4xl leading-[1.02] sm:text-5xl lg:text-[4.25rem] ${titleColor}`}
+        className={`font-display text-3xl leading-[1.08] sm:text-4xl md:text-5xl lg:text-[4.25rem] ${titleColor}`}
       >
         {title}
       </h2>
       {text ? (
-        <p className={`mx-auto mt-6 max-w-2xl text-base leading-8 sm:text-lg ${textColor}`}>
+        <p className={`mx-auto mt-5 max-w-2xl text-[15px] leading-7 sm:text-base lg:mt-6 lg:text-lg lg:leading-8 ${textColor}`}>
           {text}
         </p>
       ) : null}

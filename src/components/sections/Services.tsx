@@ -22,7 +22,7 @@ const icons = {
 
 export function Services() {
   return (
-    <MotionSection id="servicos" className="bg-porcelain py-20 sm:py-28 lg:py-32">
+    <MotionSection id="servicos" className="bg-porcelain py-16 sm:py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Tratamentos"
@@ -30,18 +30,18 @@ export function Services() {
           text="A decisão estética não começa na aplicação. Começa na avaliação do rosto, da saúde, dos objetivos e dos limites que preservam naturalidade."
           align="center"
         />
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:mt-14 lg:grid-cols-3 lg:gap-6">
           {treatments.map((treatment) => {
             const Icon = icons[treatment.icon as keyof typeof icons] ?? Sparkles;
 
             return (
               <article
                 key={treatment.title}
-                className="group min-h-[310px] rounded-[22px] border border-deep/8 bg-white p-8 shadow-[0_18px_55px_rgba(14,37,43,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_80px_rgba(14,37,43,0.12)] lg:p-9"
+                className="group rounded-[22px] border border-deep/8 bg-white p-6 shadow-[0_18px_55px_rgba(14,37,43,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_80px_rgba(14,37,43,0.12)] lg:min-h-[310px] lg:p-9"
               >
                 <div className="flex items-start justify-between gap-5">
-                  <span className="grid h-16 w-16 place-items-center rounded-full bg-champagne/16 text-champagne ring-1 ring-champagne/20">
-                    <Icon className="h-7 w-7" />
+                  <span className="grid h-14 w-14 place-items-center rounded-full bg-champagne/16 text-champagne ring-1 ring-champagne/20 lg:h-16 lg:w-16">
+                    <Icon className="h-6 w-6 lg:h-7 lg:w-7" />
                   </span>
                   <a
                     href={getWhatsappUrl(`Olá, Dr. João. Gostaria de saber mais sobre ${treatment.title}.`)}
@@ -53,7 +53,7 @@ export function Services() {
                     <ArrowUpRight className="h-4 w-4" />
                   </a>
                 </div>
-                <h3 className="mt-8 font-display text-3xl leading-tight text-ink">
+                <h3 className="mt-6 font-display text-2xl leading-tight text-ink lg:mt-8 lg:text-3xl">
                   {treatment.title}
                 </h3>
                 <p className="mt-4 text-[15px] leading-8 text-ink/62">

@@ -5,7 +5,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export function Results() {
   return (
-    <MotionSection id="resultados" className="bg-deep py-20 text-white sm:py-28 lg:py-32">
+    <MotionSection id="resultados" className="bg-deep py-16 text-white sm:py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Portfólio"
@@ -14,10 +14,10 @@ export function Results() {
           align="center"
           tone="dark"
         />
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4 lg:gap-5">
           {results.map((result) => (
             <article key={result.title} className="group">
-              <div className="relative h-[390px] overflow-hidden rounded-[20px] bg-petroleum shadow-[0_24px_80px_rgba(0,0,0,0.18)] sm:h-[430px] lg:h-[460px]">
+              <div className="relative h-[340px] overflow-hidden rounded-[20px] bg-petroleum shadow-[0_24px_80px_rgba(0,0,0,0.18)] sm:h-[380px] lg:h-[460px]">
                 <Image
                   src={result.image}
                   alt={`${result.title} - imagem ilustrativa`}
